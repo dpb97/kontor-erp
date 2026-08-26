@@ -1,0 +1,10 @@
+- group: "Backend"
+  items: [".NET 8", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "QuestPDF"]
+- group: "Frontend"
+  items: ["React 19", "TypeScript", "TailwindCSS", "Vite", "TanStack Query / Table"]
+- group: "Legacy-UI"
+  items: ["Blazor Server", "MudBlazor"]
+- group: "Microsoft 365"
+  items: ["Entra ID (MSAL)", "Microsoft Graph", "SharePoint"]
+- group: "Infrastruktur"
+  items: ["Docker", "Traefik", "GitHub Actions", "GHCR"]

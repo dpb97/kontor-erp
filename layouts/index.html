@@ -1,0 +1,201 @@
+{{ define "main" }}
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-brand">
+      {{ partial "logomark.html" . }}
+      <span>{{ .Site.Params.product }}</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#module">Funktionen</a>
+      <a href="#referenz">Referenz</a>
+      <a href="#architektur">Architektur</a>
+      <a href="#stack">Technologie</a>
+      <a href="#kontakt" class="btn btn-primary btn-sm">Demo anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">{{ .Site.Params.kicker }}</p>
+      <h1>{{ .Site.Params.tagline }}</h1>
+      <p class="hero-lead">{{ .Site.Params.description }}</p>
+      <p class="hero-audience">{{ .Site.Params.audience }}</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Demo anfragen</a>
+        <a href="#referenz" class="btn btn-ghost">Case Study ansehen</a>
+      </div>
+    </div>
+    <div class="hero-mockup" aria-hidden="true">
+      <div class="wrap">
+        <div class="browser">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
+            <div class="browser-url">ihre-firma.kontor.app / dashboard</div>
+          </div>
+          <div class="browser-body">
+            <div class="mock-side">
+              <div class="mock-pill mock-pill-active"></div>
+              <div class="mock-pill"></div>
+              <div class="mock-pill"></div>
+              <div class="mock-pill"></div>
+              <div class="mock-pill"></div>
+            </div>
+            <div class="mock-main">
+              <div class="mock-cards">
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+              </div>
+              <div class="mock-table">
+                <div class="mock-row"></div>
+                <div class="mock-row"></div>
+                <div class="mock-row"></div>
+                <div class="mock-row"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap proof-inner">
+      <span class="proof-label">Im produktiven Einsatz bei</span>
+      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="proof-logo">
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="wrap values-grid">
+      <div class="value">
+        <h3>Schluss mit Excel-Chaos</h3>
+        <p>Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
+      </div>
+      <div class="value">
+        <h3>Automatisiert im Hintergrund</h3>
+        <p>Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
+      </div>
+      <div class="value">
+        <h3>Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
+        <p>Anmeldung über Entra ID, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="module" class="modules">
+    <div class="wrap">
+      <p class="section-kicker">Funktionsumfang</p>
+      <h2>Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
+      <div class="modules-grid">
+        {{ range .Site.Data.modules }}
+        <div class="module-card">
+          {{ partial "icon.html" .icon }}
+          <h3>{{ .name }}</h3>
+          <p>{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section id="referenz" class="reference">
+    <div class="wrap reference-grid">
+      {{ range .Site.Data.references }}
+      <div class="reference-logo-col">
+        <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="reference-logo">
+        <span class="reference-industry">{{ .industry }}</span>
+      </div>
+      <div class="reference-text">
+        <p class="section-kicker">Referenz</p>
+        <h2>Im produktiven Einsatz: {{ .name }}</h2>
+        <p class="reference-desc">{{ .desc }}</p>
+        <div class="reference-tags">
+          {{ range .modules }}<span class="badge">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="architektur" class="architecture">
+    <div class="wrap arch-grid">
+      <div class="arch-text">
+        <p class="section-kicker section-kicker-light">Architektur</p>
+        <h2>Eine Architektur, die mitwächst</h2>
+        <p class="arch-lead">
+          Ob schlanker Einstieg oder vollständig entkoppelte Cloud-Architektur –
+          {{ .Site.Params.product }} wächst mit Ihren Anforderungen. Der produktive
+          Kern läuft heute als Blazor-Server-Anwendung mit MudBlazor – direkt gegen
+          PostgreSQL, mit QuestPDF für Auftrags- und Kundenstammblätter. Parallel
+          entsteht eine entkoppelte Architektur: ein React/TypeScript-Frontend
+          spricht über eine eigenständige .NET&nbsp;8-Web-API mit der Datenbank,
+          damit Oberfläche und Geschäftslogik unabhängig voneinander wachsen können.
+        </p>
+        <ul class="arch-list">
+          <li>{{ partial "icon.html" "layout-dashboard" }} <span>Bewährter Kern für Kunden, Artikel, Aufträge und Ablage</span></li>
+          <li>{{ partial "icon.html" "git-branch" }} <span>Modernes React&nbsp;19 + Vite-Frontend, angebunden an eine eigene .NET-API</span></li>
+          <li>{{ partial "icon.html" "database" }} <span>PostgreSQL als gemeinsame Datenbasis, per Entity Framework Core</span></li>
+          <li>{{ partial "icon.html" "shield-check" }} <span>Anmeldung und Dateizugriff über Microsoft Entra ID und Graph</span></li>
+          <li>{{ partial "icon.html" "server" }} <span>Containerisiert mit Docker, einsetzbar in Ihrer Infrastruktur oder in der Cloud</span></li>
+        </ul>
+      </div>
+      <div class="arch-visual" aria-hidden="true">
+        <div class="arch-box arch-box-1">Blazor Server<br><span>MudBlazor · bewährter Kern</span></div>
+        <div class="arch-arrow">⇄</div>
+        <div class="arch-box arch-box-2">React 19<br><span>TypeScript · Vite · Tailwind</span></div>
+        <div class="arch-connector"></div>
+        <div class="arch-box arch-box-3">.NET 8 Web API<br><span>Entity Framework Core</span></div>
+        <div class="arch-connector"></div>
+        <div class="arch-box arch-box-4">PostgreSQL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" class="stack">
+    <div class="wrap">
+      <p class="section-kicker">Technologie</p>
+      <h2>Gebaut mit erprobten, etablierten Werkzeugen</h2>
+      <div class="stack-grid">
+        {{ range .Site.Data.stack }}
+        <div class="stack-group">
+          <h4>{{ .group }}</h4>
+          <div class="stack-badges">
+            {{ range .items }}<span class="badge">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="cta-banner">
+    <div class="wrap cta-inner">
+      <h2>Bereit für eine Demo?</h2>
+      <p>Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
+      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="btn btn-primary">Demo anfragen</a>
+      <p class="cta-mail">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      {{ partial "logomark.html" . }}
+      <div>
+        <strong>{{ .Site.Params.product }}</strong>
+        <span>Warenwirtschaft für Handelsunternehmen</span>
+      </div>
+    </div>
+    <a href="mailto:{{ .Site.Params.contactEmail }}" class="footer-link">{{ .Site.Params.contactEmail }} ↗</a>
+  </div>
+</footer>
+
+{{ end }}

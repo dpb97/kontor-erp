@@ -1,0 +1,5 @@
+- name: "La Maison Eckmayer"
+  industry: "Feinkost- & Weinimport"
+  logo: "images/logo-eckmayer.png"
+  desc: "Steuert mit Kontor die komplette Warenwirtschaft: Kundenstamm, Artikeldaten, Bestellungen und Aufträge, automatisierte Rechnungsstellung sowie E-Mail-Archivierung – alles in einem System."
+  modules: ["Kunden & Adressen", "Artikel & Lager", "Bestellungen", "Aufträge", "Rechnungen", "Vertreter", "Kontakte", "Ablage (DMS)", "Mail-Archivierung"]

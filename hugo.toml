@@ -1,0 +1,15 @@
+baseURL = "https://dpb97.github.io/kontor-erp/"
+languageCode = "de-DE"
+title = "Kontor – Warenwirtschaft für Handelsunternehmen"
+enableRobotsTXT = true
+
+[params]
+  product = "Kontor"
+  kicker = "Warenwirtschaft für Großhandel & Import"
+  tagline = "Eine Warenwirtschaft, die mit Ihrem Handel mitwächst."
+  description = "Kunden, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
+  audience = "Großhandel · Import · Fachvertrieb · Außendienst"
+  contactEmail = "dominikpboeckle@gmail.com"
+
+[markup.goldmark.renderer]
+  unsafe = true
