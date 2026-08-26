@@ -1,201 +1,186 @@
 {{ define "main" }}
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="nav-brand">
+<header class="navbar sticky top-0 z-20 bg-base-100/90 backdrop-blur border-b border-base-300 px-4 md:px-8 max-w-6xl mx-auto">
+  <div class="navbar-start">
+    <a href="#top" class="flex items-center gap-2.5 font-serif font-bold text-primary tracking-tight">
       {{ partial "logomark.html" . }}
       <span>{{ .Site.Params.product }}</span>
     </a>
-    <nav class="nav-links">
-      <a href="#module">Funktionen</a>
-      <a href="#referenz">Referenz</a>
-      <a href="#architektur">Architektur</a>
-      <a href="#stack">Technologie</a>
-      <a href="#kontakt" class="btn btn-primary btn-sm">Demo anfragen</a>
-    </nav>
+  </div>
+  <div class="navbar-end gap-6 text-sm font-medium">
+    <a href="#module" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Funktionen</a>
+    <a href="#referenz" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Referenz</a>
+    <a href="#architektur" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Sicherheit</a>
+    <a href="#kontakt" class="btn btn-primary btn-sm rounded-full">Demo anfragen</a>
   </div>
 </header>
 
 <main id="top">
 
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <p class="kicker">{{ .Site.Params.kicker }}</p>
-      <h1>{{ .Site.Params.tagline }}</h1>
-      <p class="hero-lead">{{ .Site.Params.description }}</p>
-      <p class="hero-audience">{{ .Site.Params.audience }}</p>
-      <div class="hero-cta">
-        <a href="#kontakt" class="btn btn-primary">Demo anfragen</a>
-        <a href="#referenz" class="btn btn-ghost">Case Study ansehen</a>
+  <section class="hero bg-base-100 pt-20 pb-4">
+    <div class="hero-content flex-col text-center max-w-2xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-secondary">{{ .Site.Params.kicker }}</p>
+      <h1 class="font-serif font-bold text-primary text-4xl md:text-5xl leading-tight mt-3">{{ .Site.Params.tagline }}</h1>
+      <p class="text-base-content/70 text-lg mt-4 max-w-xl">{{ .Site.Params.description }}</p>
+      <p class="text-xs font-bold uppercase tracking-wide text-secondary mt-4">{{ .Site.Params.audience }}</p>
+      <div class="flex flex-wrap gap-3 justify-center mt-7">
+        <a href="#kontakt" class="btn btn-primary rounded-full px-6">Demo anfragen</a>
+        <a href="#referenz" class="btn btn-outline btn-primary rounded-full px-6">Case Study ansehen</a>
       </div>
     </div>
-    <div class="hero-mockup" aria-hidden="true">
-      <div class="wrap">
-        <div class="browser">
-          <div class="browser-bar">
-            <span></span><span></span><span></span>
-            <div class="browser-url">ihre-firma.kontor.app / dashboard</div>
+  </section>
+
+  <section class="pb-16 px-4">
+    <div class="mockup-browser border border-base-300 bg-base-100 shadow-xl max-w-4xl mx-auto">
+      <div class="mockup-browser-toolbar">
+        <div class="input border border-base-300 text-base-content/50 text-xs">ihre-firma.kontor.app / dashboard</div>
+      </div>
+      <div class="flex bg-base-100 border-t border-base-300 min-h-[280px]">
+        <div class="w-32 bg-primary p-4 flex flex-col gap-2.5 shrink-0">
+          <div class="h-2.5 rounded bg-secondary"></div>
+          <div class="h-2.5 rounded bg-white/15"></div>
+          <div class="h-2.5 rounded bg-white/15"></div>
+          <div class="h-2.5 rounded bg-white/15"></div>
+          <div class="h-2.5 rounded bg-white/15"></div>
+        </div>
+        <div class="flex-1 p-5">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+            <div class="h-13 rounded-lg bg-base-200 border border-base-300"></div>
+            <div class="h-13 rounded-lg bg-base-200 border border-base-300"></div>
+            <div class="h-13 rounded-lg bg-base-200 border border-base-300"></div>
+            <div class="h-13 rounded-lg bg-base-200 border border-base-300"></div>
           </div>
-          <div class="browser-body">
-            <div class="mock-side">
-              <div class="mock-pill mock-pill-active"></div>
-              <div class="mock-pill"></div>
-              <div class="mock-pill"></div>
-              <div class="mock-pill"></div>
-              <div class="mock-pill"></div>
-            </div>
-            <div class="mock-main">
-              <div class="mock-cards">
-                <div class="mock-card"></div>
-                <div class="mock-card"></div>
-                <div class="mock-card"></div>
-                <div class="mock-card"></div>
-              </div>
-              <div class="mock-table">
-                <div class="mock-row"></div>
-                <div class="mock-row"></div>
-                <div class="mock-row"></div>
-                <div class="mock-row"></div>
-              </div>
-            </div>
+          <div class="flex flex-col gap-2.5">
+            <div class="h-3.5 rounded bg-base-200 w-full"></div>
+            <div class="h-3.5 rounded bg-base-200 w-11/12"></div>
+            <div class="h-3.5 rounded bg-base-200 w-full"></div>
+            <div class="h-3.5 rounded bg-base-200 w-4/5"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="proof">
-    <div class="wrap proof-inner">
-      <span class="proof-label">Im produktiven Einsatz bei</span>
-      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="proof-logo">
+  <section class="pb-16 px-4">
+    <div class="flex items-center justify-center gap-4">
+      <span class="text-xs font-bold uppercase tracking-wide text-base-content/50">Im produktiven Einsatz bei</span>
+      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="h-8 w-auto object-contain opacity-80 grayscale">
     </div>
   </section>
 
-  <section class="values">
-    <div class="wrap values-grid">
-      <div class="value">
-        <h3>Schluss mit Excel-Chaos</h3>
-        <p>Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
+  <section class="pb-20 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-serif font-bold text-primary text-lg mb-2">Schluss mit Excel-Chaos</h3>
+        <p class="text-base-content/70 text-sm">Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
       </div>
-      <div class="value">
-        <h3>Automatisiert im Hintergrund</h3>
-        <p>Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
+      <div>
+        <h3 class="font-serif font-bold text-primary text-lg mb-2">Automatisiert im Hintergrund</h3>
+        <p class="text-base-content/70 text-sm">Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
       </div>
-      <div class="value">
-        <h3>Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
-        <p>Anmeldung über Entra ID, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
+      <div>
+        <h3 class="font-serif font-bold text-primary text-lg mb-2">Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
+        <p class="text-base-content/70 text-sm">Anmeldung über Entra ID, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
       </div>
     </div>
   </section>
 
-  <section id="module" class="modules">
-    <div class="wrap">
-      <p class="section-kicker">Funktionsumfang</p>
-      <h2>Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
-      <div class="modules-grid">
+  <section id="module" class="py-20 px-4 bg-base-200/60 border-y border-base-300">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-xs font-bold uppercase tracking-widest text-secondary mb-2">Funktionsumfang</p>
+      <h2 class="font-serif font-bold text-primary text-2xl md:text-3xl max-w-lg mb-10">Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
         {{ range .Site.Data.modules }}
-        <div class="module-card">
-          {{ partial "icon.html" .icon }}
-          <h3>{{ .name }}</h3>
-          <p>{{ .desc }}</p>
+        <div class="card bg-base-100 border border-base-300 hover:border-secondary transition-colors">
+          <div class="card-body p-6">
+            <span class="text-secondary">{{ partial "icon.html" .icon }}</span>
+            <h3 class="card-title font-serif text-base mt-2">{{ .name }}</h3>
+            <p class="text-base-content/70 text-sm">{{ .desc }}</p>
+          </div>
         </div>
         {{ end }}
       </div>
     </div>
   </section>
 
-  <section id="referenz" class="reference">
-    <div class="wrap reference-grid">
+  <section id="referenz" class="py-20 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
       {{ range .Site.Data.references }}
-      <div class="reference-logo-col">
-        <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="reference-logo">
-        <span class="reference-industry">{{ .industry }}</span>
+      <div class="card bg-base-200/60 border border-base-300">
+        <div class="card-body items-center text-center py-10">
+          <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="max-w-[200px]">
+          <span class="text-xs font-semibold text-base-content/60 tracking-wide mt-2">{{ .industry }}</span>
+        </div>
       </div>
-      <div class="reference-text">
-        <p class="section-kicker">Referenz</p>
-        <h2>Im produktiven Einsatz: {{ .name }}</h2>
-        <p class="reference-desc">{{ .desc }}</p>
-        <div class="reference-tags">
-          {{ range .modules }}<span class="badge">{{ . }}</span>{{ end }}
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-secondary mb-2">Referenz</p>
+        <h2 class="font-serif font-bold text-primary text-2xl md:text-3xl mb-4">Im produktiven Einsatz: {{ .name }}</h2>
+        <p class="text-base-content/70 mb-6">{{ .desc }}</p>
+        {{ if .statValue }}
+        <div class="stats border border-base-300 bg-base-100 mb-6">
+          <div class="stat py-3 px-5">
+            <div class="stat-value text-primary text-2xl font-serif">{{ .statValue }}</div>
+            <div class="stat-title text-secondary font-semibold">{{ .statTitle }}</div>
+            <div class="stat-desc">{{ .statDesc }}</div>
+          </div>
+        </div>
+        {{ end }}
+        <div class="flex flex-wrap gap-2">
+          {{ range .modules }}<span class="badge badge-outline border-base-300 text-primary">{{ . }}</span>{{ end }}
         </div>
       </div>
       {{ end }}
     </div>
   </section>
 
-  <section id="architektur" class="architecture">
-    <div class="wrap arch-grid">
-      <div class="arch-text">
-        <p class="section-kicker section-kicker-light">Architektur</p>
-        <h2>Eine Architektur, die mitwächst</h2>
-        <p class="arch-lead">
-          Ob schlanker Einstieg oder vollständig entkoppelte Cloud-Architektur –
-          {{ .Site.Params.product }} wächst mit Ihren Anforderungen. Der produktive
-          Kern läuft heute als Blazor-Server-Anwendung mit MudBlazor – direkt gegen
-          PostgreSQL, mit QuestPDF für Auftrags- und Kundenstammblätter. Parallel
-          entsteht eine entkoppelte Architektur: ein React/TypeScript-Frontend
-          spricht über eine eigenständige .NET&nbsp;8-Web-API mit der Datenbank,
-          damit Oberfläche und Geschäftslogik unabhängig voneinander wachsen können.
-        </p>
-        <ul class="arch-list">
-          <li>{{ partial "icon.html" "layout-dashboard" }} <span>Bewährter Kern für Kunden, Artikel, Aufträge und Ablage</span></li>
-          <li>{{ partial "icon.html" "git-branch" }} <span>Modernes React&nbsp;19 + Vite-Frontend, angebunden an eine eigene .NET-API</span></li>
-          <li>{{ partial "icon.html" "database" }} <span>PostgreSQL als gemeinsame Datenbasis, per Entity Framework Core</span></li>
-          <li>{{ partial "icon.html" "shield-check" }} <span>Anmeldung und Dateizugriff über Microsoft Entra ID und Graph</span></li>
-          <li>{{ partial "icon.html" "server" }} <span>Containerisiert mit Docker, einsetzbar in Ihrer Infrastruktur oder in der Cloud</span></li>
-        </ul>
-      </div>
-      <div class="arch-visual" aria-hidden="true">
-        <div class="arch-box arch-box-1">Blazor Server<br><span>MudBlazor · bewährter Kern</span></div>
-        <div class="arch-arrow">⇄</div>
-        <div class="arch-box arch-box-2">React 19<br><span>TypeScript · Vite · Tailwind</span></div>
-        <div class="arch-connector"></div>
-        <div class="arch-box arch-box-3">.NET 8 Web API<br><span>Entity Framework Core</span></div>
-        <div class="arch-connector"></div>
-        <div class="arch-box arch-box-4">PostgreSQL</div>
-      </div>
+  <section id="architektur" class="py-16 px-4 bg-neutral text-neutral-content text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Sicherheit &amp; Skalierung</p>
+      <h2 class="font-serif font-bold text-white text-2xl md:text-3xl mb-4">Wächst mit Ihrem Handelsgeschäft</h2>
+      <p class="text-neutral-content/70 mb-10">
+        Ob ein Standort oder mehrere, zehn Artikel oder zehntausend –
+        {{ .Site.Params.product }} wächst mit Ihren Anforderungen, statt
+        sie zu begrenzen. Läuft in Ihrer Infrastruktur oder in der Cloud.
+      </p>
+      <ul class="flex flex-wrap justify-center gap-9 list-none p-0 m-0">
+        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
+          <span class="text-accent">{{ partial "icon.html" "shield-check" }}</span>
+          Anmeldung über Microsoft Entra ID – keine separate Nutzerverwaltung
+        </li>
+        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
+          <span class="text-accent">{{ partial "icon.html" "database" }}</span>
+          Eine gemeinsame, konsistente Datenbasis für alle Module
+        </li>
+        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
+          <span class="text-accent">{{ partial "icon.html" "server" }}</span>
+          Containerisiert – einsetzbar bei Ihnen vor Ort oder in der Cloud
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section id="stack" class="stack">
-    <div class="wrap">
-      <p class="section-kicker">Technologie</p>
-      <h2>Gebaut mit erprobten, etablierten Werkzeugen</h2>
-      <div class="stack-grid">
-        {{ range .Site.Data.stack }}
-        <div class="stack-group">
-          <h4>{{ .group }}</h4>
-          <div class="stack-badges">
-            {{ range .items }}<span class="badge">{{ . }}</span>{{ end }}
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="cta-banner">
-    <div class="wrap cta-inner">
-      <h2>Bereit für eine Demo?</h2>
-      <p>Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
-      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="btn btn-primary">Demo anfragen</a>
-      <p class="cta-mail">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
+  <section id="kontakt" class="py-20 px-4 bg-primary text-primary-content text-center">
+    <div class="max-w-md mx-auto">
+      <h2 class="font-serif font-bold text-white text-2xl md:text-3xl mb-3">Bereit für eine Demo?</h2>
+      <p class="text-primary-content/75 mb-7">Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
+      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="btn btn-secondary rounded-full px-7">Demo anfragen</a>
+      <p class="text-xs text-primary-content/60 mt-5">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-accent font-semibold hover:underline">{{ .Site.Params.contactEmail }}</a></p>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      {{ partial "logomark.html" . }}
-      <div>
-        <strong>{{ .Site.Params.product }}</strong>
-        <span>Warenwirtschaft für Handelsunternehmen</span>
-      </div>
+<footer class="footer sm:footer-horizontal items-center bg-neutral text-neutral-content px-6 py-8">
+  <aside class="grid-flow-col items-center gap-3">
+    {{ partial "logomark.html" . }}
+    <div class="leading-tight">
+      <p class="font-serif font-bold text-white">{{ .Site.Params.product }}</p>
+      <p class="text-xs text-neutral-content/60">Warenwirtschaft für Handelsunternehmen</p>
     </div>
-    <a href="mailto:{{ .Site.Params.contactEmail }}" class="footer-link">{{ .Site.Params.contactEmail }} ↗</a>
-  </div>
+  </aside>
+  <nav class="md:place-self-center md:justify-self-end">
+    <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-accent text-sm font-semibold hover:underline">{{ .Site.Params.contactEmail }} ↗</a>
+  </nav>
 </footer>
 
 {{ end }}

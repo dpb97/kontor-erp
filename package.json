@@ -1,0 +1,12 @@
+{
+  "name": "kontor-erp-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./static/css/style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "daisyui": "^5.3.5",
+    "tailwindcss": "^4.1.16"
+  }
+}

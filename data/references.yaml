@@ -1,5 +1,8 @@
 - name: "La Maison Eckmayer"
-  industry: "Feinkost- & Weinimport"
+  industry: "Interieur & Dekorationsstoffe"
   logo: "images/logo-eckmayer.png"
-  desc: "Steuert mit Kontor die komplette Warenwirtschaft: Kundenstamm, Artikeldaten, Bestellungen und Aufträge, automatisierte Rechnungsstellung sowie E-Mail-Archivierung – alles in einem System."
+  desc: "Exklusive Ausstattung für Wohn- und Objekteinrichtung – Stoffe, Posamente, Tapeten, Gardinenstangen und Accessoires. Steuert mit Kontor die komplette Warenwirtschaft inklusive Vertreternetz in Deutschland und Österreich: Kundenstamm, Artikeldaten, Bestellungen und Aufträge, automatisierte Rechnungsstellung sowie E-Mail-Archivierung – alles in einem System."
+  statValue: "Mehrere hundert"
+  statTitle: "Aufträge & Bestellungen"
+  statDesc: "erfolgreich abgewickelt in den ersten zwei Monaten"
   modules: ["Kunden & Adressen", "Artikel & Lager", "Bestellungen", "Aufträge", "Rechnungen", "Vertreter", "Kontakte", "Ablage (DMS)", "Mail-Archivierung"]
