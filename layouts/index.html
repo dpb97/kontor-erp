@@ -1,19 +1,6 @@
 {{ define "main" }}
 
-<header class="navbar sticky top-0 z-20 bg-base-100/90 backdrop-blur border-b border-base-300 px-4 md:px-8 max-w-6xl mx-auto">
-  <div class="navbar-start">
-    <a href="#top" class="flex items-center gap-2.5 font-serif font-bold text-primary tracking-tight">
-      {{ partial "logomark.html" . }}
-      <span>{{ .Site.Params.product }}</span>
-    </a>
-  </div>
-  <div class="navbar-end gap-6 text-sm font-medium">
-    <a href="#module" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Funktionen</a>
-    <a href="#referenz" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Referenz</a>
-    <a href="#architektur" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Sicherheit</a>
-    <a href="#kontakt" class="btn btn-primary btn-sm rounded-full">Demo anfragen</a>
-  </div>
-</header>
+{{ partial "nav.html" . }}
 
 <main id="top">
 
@@ -170,17 +157,6 @@
 
 </main>
 
-<footer class="footer sm:footer-horizontal items-center bg-neutral text-neutral-content px-6 py-8">
-  <aside class="grid-flow-col items-center gap-3">
-    {{ partial "logomark.html" . }}
-    <div class="leading-tight">
-      <p class="font-serif font-bold text-white">{{ .Site.Params.product }}</p>
-      <p class="text-xs text-neutral-content/60">Warenwirtschaft für Handelsunternehmen</p>
-    </div>
-  </aside>
-  <nav class="md:place-self-center md:justify-self-end">
-    <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-accent text-sm font-semibold hover:underline">{{ .Site.Params.contactEmail }} ↗</a>
-  </nav>
-</footer>
+{{ partial "footer.html" . }}
 
 {{ end }}

@@ -3,6 +3,8 @@
 @source "../layouts";
 @source "../content";
 
+@plugin "@tailwindcss/typography";
+
 @plugin "daisyui" {
   themes: kontor --default;
 }

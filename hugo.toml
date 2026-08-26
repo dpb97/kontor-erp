@@ -9,7 +9,7 @@ enableRobotsTXT = true
   tagline = "Eine Warenwirtschaft, die mit Ihrem Handel mitwächst."
   description = "Kunden, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
   audience = "Großhandel · Import · Fachvertrieb · Außendienst"
-  contactEmail = "dominikpboeckle@gmail.com"
+  contactEmail = "dominik.boeckle@gmail.com"
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -1,0 +1,14 @@
+<footer class="footer sm:footer-horizontal items-center bg-neutral text-neutral-content px-6 py-8 gap-4">
+  <aside class="grid-flow-col items-center gap-3">
+    {{ partial "logomark.html" . }}
+    <div class="leading-tight">
+      <p class="font-serif font-bold text-white">{{ .Site.Params.product }}</p>
+      <p class="text-xs text-neutral-content/60">Warenwirtschaft für Handelsunternehmen</p>
+    </div>
+  </aside>
+  <nav class="md:place-self-center md:justify-self-end flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+    <a href="{{ "impressum/" | relURL }}" class="text-neutral-content/70 hover:text-white transition-colors">Impressum</a>
+    <a href="{{ "datenschutz/" | relURL }}" class="text-neutral-content/70 hover:text-white transition-colors">Datenschutz</a>
+    <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-accent font-semibold hover:underline">{{ .Site.Params.contactEmail }} ↗</a>
+  </nav>
+</footer>

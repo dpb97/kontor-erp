@@ -1,0 +1,15 @@
+{{ $home := .Site.Home.RelPermalink }}
+<header class="navbar sticky top-0 z-20 bg-base-100/90 backdrop-blur border-b border-base-300 px-4 md:px-8 max-w-6xl mx-auto">
+  <div class="navbar-start">
+    <a href="{{ $home }}" class="flex items-center gap-2.5 font-serif font-bold text-primary tracking-tight">
+      {{ partial "logomark.html" . }}
+      <span>{{ .Site.Params.product }}</span>
+    </a>
+  </div>
+  <div class="navbar-end gap-6 text-sm font-medium">
+    <a href="{{ $home }}#module" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Funktionen</a>
+    <a href="{{ $home }}#referenz" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Referenz</a>
+    <a href="{{ $home }}#architektur" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Sicherheit</a>
+    <a href="{{ $home }}#kontakt" class="btn btn-primary btn-sm rounded-full">Demo anfragen</a>
+  </div>
+</header>
