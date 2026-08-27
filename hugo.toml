@@ -25,7 +25,7 @@ enableRobotsTXT = true
 
 [[params.faq]]
   q = "Was kostet Kontor?"
-  a = "Richtpreis ab 20 € pro Nutzer und Monat vor Ort, ab 25 € in der Cloud, jeweils ab drei Nutzern. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
+  a = "Richtpreis ab 10 € pro Nutzer und Monat vor Ort, ab 15 € in der Cloud, jeweils ab drei Nutzern. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
 
 [markup.goldmark.renderer]
   unsafe = true
