@@ -21,7 +21,7 @@ enableRobotsTXT = true
 
 [[params.faq]]
   q = "Wo liegen unsere Daten?"
-  a = "Sie entscheiden: Kontor läuft containerisiert und lässt sich bei Ihnen vor Ort oder in der Cloud betreiben."
+  a = "Sie entscheiden: Kontor läuft containerisiert und lässt sich bei Ihnen vor Ort oder in der Cloud auf EU-Servern betreiben."
 
 [[params.faq]]
   q = "Was kostet Kontor?"
