@@ -7,7 +7,7 @@ enableRobotsTXT = true
   product = "Kontor"
   kicker = "Warenwirtschaft für Großhandel & Import"
   tagline = "Eine Warenwirtschaft, die mit Ihrem Handel mitwächst."
-  description = "Kunden, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
+  description = "Kund:innen, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
   audience = "Großhandel · Import · Fachvertrieb · Außendienst"
   contactEmail = "dominik.boeckle@gmail.com"
 
@@ -25,7 +25,7 @@ enableRobotsTXT = true
 
 [[params.faq]]
   q = "Was kostet Kontor?"
-  a = "Richtpreis ab 10 € pro Nutzer und Monat vor Ort, ab 15 € in der Cloud, jeweils ab drei Nutzern. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
+  a = "Richtpreis ab 10 € pro Nutzer:in und Monat vor Ort, ab 15 € in der Cloud, jeweils ab drei Nutzer:innen. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
 
 [markup.goldmark.renderer]
   unsafe = true

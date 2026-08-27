@@ -3,9 +3,9 @@
     - name: "Kunden & Adressen"
       desc: "Kundenstammdaten, Adressen, Kundengruppen und Rabattstaffeln in einem zentralen CRM-Modul."
     - name: "Artikel & Lager"
-      desc: "Artikelstamm, Lieferanten, EAN-Codes, Einheiten und Lagerbestände – die Basis der Warenwirtschaft."
+      desc: "Artikelstamm, Lieferant:innen, EAN-Codes, Einheiten und Lagerbestände – die Basis der Warenwirtschaft."
     - name: "Kontakte"
-      desc: "Ansprechpartner je Kunde, verknüpft mit Aktivitäten und der Mail-Archivierung."
+      desc: "Ansprechpartner:innen je Kund:in, verknüpft mit Aktivitäten und der Mail-Archivierung."
 - category: "Verkauf"
   items:
     - name: "Bestellungen"
@@ -17,10 +17,10 @@
 - category: "Vertrieb"
   items:
     - name: "Vertreter"
-      desc: "Vertreterverwaltung mit Zuordnung zu Kunden, Gebieten und Konditionen."
+      desc: "Vertreterverwaltung mit Zuordnung zu Kund:innen, Gebieten und Konditionen."
 - category: "Dokumente"
   items:
     - name: "Ablage (DMS)"
       desc: "Dokumente lokal und in SharePoint – Angebote, Lieferscheine und Rechnungen an einem Ort."
     - name: "Mail-Archivierung"
-      desc: "Eingehende E-Mails werden automatisch erkannt, Kunden zugeordnet und archiviert."
+      desc: "Eingehende E-Mails werden automatisch erkannt, Kund:innen zugeordnet und archiviert."
