@@ -1,31 +1,65 @@
 baseURL = "https://dpb97.github.io/kontor-erp/"
-languageCode = "de-DE"
-title = "Kontor – Warenwirtschaft für Handelsunternehmen"
+defaultContentLanguage = "de"
 enableRobotsTXT = true
 
 [params]
   product = "Kontor"
-  kicker = "Warenwirtschaft für Großhandel & Import"
-  tagline = "Eine Warenwirtschaft, die mit Ihrem Handel mitwächst."
-  description = "Kund:innen, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
-  audience = "Großhandel · Import · Fachvertrieb · Außendienst"
   contactEmail = "dominik.boeckle@gmail.com"
-
-[[params.faq]]
-  q = "Wie schnell ist Kontor einsatzbereit?"
-  a = "Das hängt vom Umfang ab und wird gemeinsam in der Demo eingeschätzt. La Maison Eckmayer hat bereits in den ersten zwei Monaten hunderte Aufträge und Bestellungen über Kontor abgewickelt."
-
-[[params.faq]]
-  q = "Was passiert mit unseren bestehenden Daten?"
-  a = "Kundenstamm, Artikeldaten und Historie aus Excel oder einem Altsystem werden übernommen. Dafür analysieren wir zuerst Ihren bestehenden Datenbestand und kalkulieren das Migrationspaket danach individuell."
-
-[[params.faq]]
-  q = "Wo liegen unsere Daten?"
-  a = "Sie entscheiden: Kontor läuft containerisiert und lässt sich bei Ihnen vor Ort oder in der Cloud auf EU-Servern betreiben."
-
-[[params.faq]]
-  q = "Was kostet Kontor?"
-  a = "Richtpreis ab 10 € pro Nutzer:in und Monat vor Ort, ab 15 € in der Cloud, jeweils ab drei Nutzer:innen. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    weight = 1
+    title = "Kontor – Warenwirtschaft für Handelsunternehmen"
+    [languages.de.params]
+      kicker = "Warenwirtschaft für Großhandel & Import"
+      tagline = "Eine Warenwirtschaft, die mit Ihrem Handel mitwächst."
+      description = "Kund:innen, Artikel, Aufträge, Rechnungen und Dokumente – in einem System vereint. Entwickelt für Großhandel, Import und Fachvertrieb. Im produktiven Einsatz bei La Maison Eckmayer."
+      audience = "Großhandel · Import · Fachvertrieb · Außendienst"
+
+    [[languages.de.params.faq]]
+      q = "Wie schnell ist Kontor einsatzbereit?"
+      a = "Das hängt vom Umfang ab und wird gemeinsam in der Demo eingeschätzt. La Maison Eckmayer hat bereits in den ersten zwei Monaten hunderte Aufträge und Bestellungen über Kontor abgewickelt."
+
+    [[languages.de.params.faq]]
+      q = "Was passiert mit unseren bestehenden Daten?"
+      a = "Kundenstamm, Artikeldaten und Historie aus Excel oder einem Altsystem können übernommen werden. Dafür analysieren wir zuerst Ihren bestehenden Datenbestand und kalkulieren das Migrationspaket danach individuell."
+
+    [[languages.de.params.faq]]
+      q = "Wo liegen unsere Daten?"
+      a = "Sie entscheiden: Kontor läuft containerisiert und lässt sich bei Ihnen vor Ort oder in der Cloud auf EU-Servern betreiben."
+
+    [[languages.de.params.faq]]
+      q = "Was kostet Kontor?"
+      a = "Richtpreis ab 10 € pro Nutzer:in und Monat vor Ort, ab 15 € in der Cloud, jeweils ab drei Nutzer:innen. Details dazu oben, die finalen Konditionen besprechen wir in der Demo."
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 2
+    title = "Kontor – ERP for trading businesses"
+    [languages.en.params]
+      kicker = "ERP for wholesale & import"
+      tagline = "An ERP that grows with your business."
+      description = "Customers, items, orders, invoices and documents – in one system. Built for wholesale, import, and field sales. In production use at La Maison Eckmayer."
+      audience = "Wholesale · Import · Field Sales · Distribution"
+
+    [[languages.en.params.faq]]
+      q = "How quickly can Kontor go live?"
+      a = "That depends on the scope, and we'll size it together in the demo. La Maison Eckmayer already had hundreds of orders running through Kontor within the first two months."
+
+    [[languages.en.params.faq]]
+      q = "What happens to our existing data?"
+      a = "Your customer records, item data, and history from Excel or a legacy system can be taken over. We first analyse your existing data, then price the migration package individually."
+
+    [[languages.en.params.faq]]
+      q = "Where is our data stored?"
+      a = "You decide: Kontor is containerised and can run on your own premises or in the cloud on EU servers."
+
+    [[languages.en.params.faq]]
+      q = "What does Kontor cost?"
+      a = "Indicative pricing from €10 per user per month on-premises, from €15 in the cloud, both starting at three users. Details above; we'll work out the final terms together in the demo."

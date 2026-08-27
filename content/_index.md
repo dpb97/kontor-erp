@@ -1,3 +1,3 @@
 ---
-title: "La Maison Eckmayer – ERP / CRM / SRM"
+title: "Kontor – Warenwirtschaft für Handelsunternehmen"
 ---

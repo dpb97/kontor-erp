@@ -6,11 +6,14 @@
       <span class="text-lg">{{ .Site.Params.product }}</span>
     </a>
     <nav class="hidden sm:flex items-center gap-8 text-xs uppercase tracking-widest text-ink/70">
-      <a href="{{ $home }}#module" class="hover:text-navy transition-colors">Funktionen</a>
-      <a href="{{ $home }}#referenz" class="hover:text-navy transition-colors">Referenz</a>
-      <a href="{{ $home }}#architektur" class="hover:text-navy transition-colors">Sicherheit</a>
-      <a href="{{ $home }}#preise" class="hover:text-navy transition-colors">Preise</a>
-      <a href="{{ $home }}#kontakt" class="text-navy border-b border-navy pb-0.5 hover:text-gold hover:border-gold transition-colors">Demo anfragen</a>
+      <a href="{{ $home }}#module" class="hover:text-navy transition-colors">{{ i18n "nav_functions" }}</a>
+      <a href="{{ $home }}#referenz" class="hover:text-navy transition-colors">{{ i18n "nav_reference" }}</a>
+      <a href="{{ $home }}#architektur" class="hover:text-navy transition-colors">{{ i18n "nav_security" }}</a>
+      <a href="{{ $home }}#preise" class="hover:text-navy transition-colors">{{ i18n "nav_pricing" }}</a>
+      {{ range .Site.Home.Translations }}
+      <a href="{{ .RelPermalink }}" class="hover:text-navy transition-colors">{{ .Language.LanguageName }}</a>
+      {{ end }}
+      <a href="{{ $home }}#kontakt" class="text-navy border-b border-navy pb-0.5 hover:text-gold hover:border-gold transition-colors">{{ i18n "nav_cta" }}</a>
     </nav>
   </div>
 </header>

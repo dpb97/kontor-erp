@@ -11,8 +11,8 @@
       <p class="text-ink/70 text-lg leading-relaxed mb-5">{{ .Site.Params.description }}</p>
       <p class="text-xs uppercase tracking-[0.15em] text-gold mb-10">{{ .Site.Params.audience }}</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="#kontakt" class="border border-navy text-navy px-7 py-3 text-sm tracking-wide hover:bg-navy hover:text-white transition-colors">Demo anfragen</a>
-        <a href="#referenz" class="px-7 py-3 text-sm tracking-wide text-ink/70 hover:text-navy transition-colors">Case Study ansehen →</a>
+        <a href="#kontakt" class="border border-navy text-navy px-7 py-3 text-sm tracking-wide hover:bg-navy hover:text-white transition-colors">{{ i18n "hero_cta_primary" }}</a>
+        <a href="#referenz" class="px-7 py-3 text-sm tracking-wide text-ink/70 hover:text-navy transition-colors">{{ i18n "hero_cta_secondary" }}</a>
       </div>
     </div>
   </section>
@@ -20,42 +20,43 @@
   <section class="pb-24 px-6">
     <figure class="max-w-3xl mx-auto">
       <div class="border border-line p-2 bg-white">
-        <img src="{{ "images/screenshot_overview.png" | relURL }}" alt="Kontor Dashboard mit Kunden-, Artikel- und Auftragsübersicht" class="w-full">
+        <img src="{{ "images/screenshot_overview.png" | relURL }}" alt="{{ i18n "hero_image_alt" }}" class="w-full">
       </div>
-      <figcaption class="text-center text-xs text-ink/40 mt-4 tracking-wide">{{ .Site.Params.product }} — Dashboard</figcaption>
+      <figcaption class="text-center text-xs text-ink/40 mt-4 tracking-wide">{{ i18n "dashboard_caption" (dict "Product" .Site.Params.product) }}</figcaption>
     </figure>
   </section>
 
   <section class="py-10 px-6 border-y border-line">
     <div class="flex items-center justify-center gap-5">
-      <span class="text-xs uppercase tracking-[0.15em] text-gold">Im produktiven Einsatz bei</span>
-      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="h-9 w-auto object-contain grayscale opacity-70">
+      <span class="text-xs uppercase tracking-[0.15em] text-gold">{{ i18n "proof_label" }}</span>
+      {{ $ref := index (index .Site.Data.references .Site.Language.Lang) 0 }}
+      <img src="{{ $ref.logo | relURL }}" alt="{{ $ref.name }}" class="h-9 w-auto object-contain grayscale opacity-70">
     </div>
   </section>
 
   <section class="py-24 px-6">
     <div class="max-w-4xl mx-auto grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line">
       <div class="md:px-8 py-6 md:py-0 first:pt-0">
-        <h3 class="font-serif text-navy text-lg mb-3">Schluss mit Excel-Chaos</h3>
-        <p class="text-ink/65 text-sm leading-relaxed">Kund:innen, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System statt in verstreuten Listen und Ordnern.</p>
+        <h3 class="font-serif text-navy text-lg mb-3">{{ i18n "value1_title" }}</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">{{ i18n "value1_desc" }}</p>
       </div>
       <div class="md:px-8 py-6 md:py-0">
-        <h3 class="font-serif text-navy text-lg mb-3">Automatisiert im Hintergrund</h3>
-        <p class="text-ink/65 text-sm leading-relaxed">Eingehende E-Mails werden automatisch erkannt, der passenden Kund:in zugeordnet und archiviert, ganz ohne manuelles Sortieren.</p>
+        <h3 class="font-serif text-navy text-lg mb-3">{{ i18n "value2_title" }}</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">{{ i18n "value2_desc" }}</p>
       </div>
       <div class="md:px-8 py-6 md:py-0">
-        <h3 class="font-serif text-navy text-lg mb-3">Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
-        <p class="text-ink/65 text-sm leading-relaxed">Anmeldung über Ihren Outlook Login, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
+        <h3 class="font-serif text-navy text-lg mb-3">{{ i18n "value3_title" }}</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">{{ i18n "value3_desc" }}</p>
       </div>
     </div>
   </section>
 
   <section id="module" class="py-24 px-6 bg-paper border-y border-line">
     <div class="max-w-2xl mx-auto">
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3 text-center">Funktionsumfang</p>
-      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-16 text-center">Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3 text-center">{{ i18n "module_kicker" }}</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-16 text-center">{{ i18n "module_heading" }}</h2>
       <div class="space-y-12">
-        {{ range .Site.Data.modules }}
+        {{ range index .Site.Data.modules .Site.Language.Lang }}
         <div>
           <p class="text-xs uppercase tracking-[0.15em] text-gold mb-4">{{ .category }}</p>
           <div class="border-t border-line divide-y divide-line">
@@ -74,8 +75,8 @@
 
   <section id="referenz" class="py-24 px-6">
     <div class="max-w-2xl mx-auto text-center">
-      {{ range .Site.Data.references }}
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-8">Referenz</p>
+      {{ range index .Site.Data.references .Site.Language.Lang }}
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-8">{{ i18n "reference_kicker" }}</p>
       <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="h-16 w-auto mx-auto mb-3">
       <p class="text-xs uppercase tracking-[0.15em] text-gold mb-10">{{ .industry }}</p>
       <p class="font-serif text-navy text-xl md:text-2xl leading-snug mb-8">{{ .desc }}</p>
@@ -89,44 +90,41 @@
 
   <section id="architektur" class="py-24 px-6 bg-paper border-y border-line">
     <div class="max-w-2xl mx-auto text-center">
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">Sicherheit &amp; Skalierung</p>
-      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">Wächst mit Ihrem Handelsgeschäft</h2>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">{{ i18n "security_kicker" }}</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">{{ i18n "security_heading" }}</h2>
       <p class="text-ink/65 leading-relaxed mb-12 max-w-lg mx-auto">
-        Ob ein Standort oder mehrere, zehn Artikel oder zehntausend:
-        {{ .Site.Params.product }} wächst mit Ihren Anforderungen, statt
-        sie zu begrenzen. Läuft in Ihrer Infrastruktur oder in der Cloud.
+        {{ i18n "security_intro" (dict "Product" .Site.Params.product) }}
       </p>
       <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line max-w-xl mx-auto">
-        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Anmeldung über Ihren Outlook Login möglich, keine separate Nutzerverwaltung</p>
-        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Eine gemeinsame, konsistente Datenbasis für alle Module</p>
-        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Containerisiert, einsetzbar bei Ihnen vor Ort oder in der Cloud auf EU-Servern</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">{{ i18n "security_item1" }}</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">{{ i18n "security_item2" }}</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">{{ i18n "security_item3" }}</p>
       </div>
     </div>
   </section>
 
   <section id="ablauf" class="py-24 px-6">
     <div class="max-w-2xl mx-auto text-center">
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">Ablauf</p>
-      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">So kommen Sie live</h2>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">{{ i18n "process_kicker" }}</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">{{ i18n "process_heading" }}</h2>
       <p class="text-ink/65 leading-relaxed mb-14 max-w-lg mx-auto">
-        Kontor wird nicht einfach installiert, sondern gemeinsam mit Ihnen eingerichtet,
-        von den ersten Gesprächen bis zum produktiven Einsatz.
+        {{ i18n "process_intro" (dict "Product" .Site.Params.product) }}
       </p>
       <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line max-w-xl mx-auto">
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
           <span class="font-serif text-gold text-sm block mb-2">01</span>
-          <h3 class="font-serif text-navy text-base mb-1.5">Kennenlernen</h3>
-          <p class="text-sm text-ink/70 leading-relaxed">Wir besprechen Ihre Abläufe: Kund:innen, Artikel, Aufträge und bestehende Systeme.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "process_step1_title" }}</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "process_step1_desc" }}</p>
         </div>
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
           <span class="font-serif text-gold text-sm block mb-2">02</span>
-          <h3 class="font-serif text-navy text-base mb-1.5">Einrichtung</h3>
-          <p class="text-sm text-ink/70 leading-relaxed">Kontor wird auf Ihre Struktur zugeschnitten, bestehende Daten übernommen.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "process_step2_title" }}</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "process_step2_desc" (dict "Product" .Site.Params.product) }}</p>
         </div>
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
           <span class="font-serif text-gold text-sm block mb-2">03</span>
-          <h3 class="font-serif text-navy text-base mb-1.5">Live-Betrieb</h3>
-          <p class="text-sm text-ink/70 leading-relaxed">Ihr Team arbeitet im System, Sie behalten von Anfang an den Überblick.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "process_step3_title" }}</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "process_step3_desc" }}</p>
         </div>
       </div>
     </div>
@@ -134,30 +132,29 @@
 
   <section id="preise" class="py-24 px-6">
     <div class="max-w-2xl mx-auto text-center">
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">Preise</p>
-      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">Richtpreise, keine Überraschungen</h2>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">{{ i18n "pricing_kicker" }}</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">{{ i18n "pricing_heading" }}</h2>
       <p class="text-ink/65 leading-relaxed mb-14 max-w-lg mx-auto">
-        Abgerechnet wird pro Nutzer:in, ab drei Nutzer:innen. Die finalen Konditionen
-        für Ihr Handelsgeschäft besprechen wir gemeinsam in der Demo.
+        {{ i18n "pricing_intro" }}
       </p>
       <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line max-w-xl mx-auto">
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
-          <h3 class="font-serif text-navy text-base mb-1.5">Vor Ort</h3>
-          <div class="font-serif text-navy text-2xl mb-0.5">ab 10&nbsp;€</div>
-          <p class="text-xs text-ink/50 mb-3">pro Nutzer:in, pro Monat · Richtpreis</p>
-          <p class="text-sm text-ink/70 leading-relaxed">Kontor läuft auf Ihrer eigenen Infrastruktur.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "pricing_onprem_title" }}</h3>
+          <div class="font-serif text-navy text-2xl mb-0.5">{{ i18n "pricing_onprem_price" | safeHTML }}</div>
+          <p class="text-xs text-ink/50 mb-3">{{ i18n "pricing_unit" }}</p>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "pricing_onprem_desc" (dict "Product" .Site.Params.product) }}</p>
         </div>
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
-          <h3 class="font-serif text-navy text-base mb-1.5">Cloud</h3>
-          <div class="font-serif text-navy text-2xl mb-0.5">ab 15&nbsp;€</div>
-          <p class="text-xs text-ink/50 mb-3">pro Nutzer:in, pro Monat · Richtpreis</p>
-          <p class="text-sm text-ink/70 leading-relaxed">Kontor läuft auf unserer Infrastruktur auf EU-Servern, Serverkosten kommen anteilig dazu.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "pricing_cloud_title" }}</h3>
+          <div class="font-serif text-navy text-2xl mb-0.5">{{ i18n "pricing_cloud_price" | safeHTML }}</div>
+          <p class="text-xs text-ink/50 mb-3">{{ i18n "pricing_unit" }}</p>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "pricing_cloud_desc" (dict "Product" .Site.Params.product) }}</p>
         </div>
         <div class="sm:px-6 py-6 sm:py-0 text-left sm:text-center">
-          <h3 class="font-serif text-navy text-base mb-1.5">Datenmigration</h3>
-          <div class="font-serif text-navy text-2xl mb-0.5">Individuell</div>
-          <p class="text-xs text-ink/50 mb-3">nach erster Bestandsanalyse</p>
-          <p class="text-sm text-ink/70 leading-relaxed">Übernahme Ihrer bestehenden Daten aus Excel oder Altsystem.</p>
+          <h3 class="font-serif text-navy text-base mb-1.5">{{ i18n "pricing_migration_title" }}</h3>
+          <div class="font-serif text-navy text-2xl mb-0.5">{{ i18n "pricing_migration_price" }}</div>
+          <p class="text-xs text-ink/50 mb-3">{{ i18n "pricing_migration_unit" }}</p>
+          <p class="text-sm text-ink/70 leading-relaxed">{{ i18n "pricing_migration_desc" }}</p>
         </div>
       </div>
     </div>
@@ -165,8 +162,8 @@
 
   <section id="faq" class="py-24 px-6 bg-paper border-y border-line">
     <div class="max-w-2xl mx-auto">
-      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3 text-center">Häufige Fragen</p>
-      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-14 text-center">Bevor Sie fragen</h2>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3 text-center">{{ i18n "faq_kicker" }}</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-14 text-center">{{ i18n "faq_heading" }}</h2>
       <div class="divide-y divide-line">
         {{ range .Site.Params.faq }}
         <div class="py-6 first:pt-0">
@@ -180,10 +177,10 @@
 
   <section id="kontakt" class="py-24 px-6 bg-navy text-white text-center">
     <div class="max-w-md mx-auto">
-      <h2 class="font-serif text-2xl md:text-3xl mb-4">Bereit für eine Demo?</h2>
-      <p class="text-white/65 leading-relaxed mb-9">Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
-      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="inline-block border border-gold-light text-gold-light px-7 py-3 text-sm tracking-wide hover:bg-gold-light hover:text-navy transition-colors">Demo anfragen</a>
-      <p class="text-xs text-white/40 mt-6">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-gold-light hover:underline">{{ .Site.Params.contactEmail }}</a></p>
+      <h2 class="font-serif text-2xl md:text-3xl mb-4">{{ i18n "contact_heading" }}</h2>
+      <p class="text-white/65 leading-relaxed mb-9">{{ i18n "contact_intro" (dict "Product" .Site.Params.product) }}</p>
+      <a href="mailto:{{ .Site.Params.contactEmail }}?subject={{ i18n "mailto_subject" }}{{ .Site.Params.product }}" class="inline-block border border-gold-light text-gold-light px-7 py-3 text-sm tracking-wide hover:bg-gold-light hover:text-navy transition-colors">{{ i18n "contact_cta" }}</a>
+      <p class="text-xs text-white/40 mt-6">{{ i18n "contact_or_mail" }} <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-gold-light hover:underline">{{ .Site.Params.contactEmail }}</a></p>
     </div>
   </section>
 

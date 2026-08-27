@@ -5,6 +5,9 @@
 <link rel="icon" href="{{ "images/favicon.svg" | relURL }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ "fonts/fonts.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end }}
 
 <meta property="og:title" content="{{ .Site.Title }}">
 <meta property="og:description" content="{{ .Site.Params.description }}">

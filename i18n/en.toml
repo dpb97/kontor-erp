@@ -1,0 +1,129 @@
+[nav_functions]
+other = "Features"
+[nav_reference]
+other = "Reference"
+[nav_security]
+other = "Security"
+[nav_pricing]
+other = "Pricing"
+[nav_cta]
+other = "Book a demo"
+
+[hero_cta_primary]
+other = "Book a demo"
+[hero_cta_secondary]
+other = "See the case study →"
+[hero_image_alt]
+other = "Kontor dashboard showing customer, item and order overview"
+[dashboard_caption]
+other = "{{.Product}} — Dashboard"
+
+[proof_label]
+other = "In production use at"
+
+[value1_title]
+other = "No more spreadsheet chaos"
+[value1_desc]
+other = "Customers, items, orders, invoices and documents in one connected system, instead of scattered spreadsheets and folders."
+[value2_title]
+other = "Automated in the background"
+[value2_desc]
+other = "Incoming emails are recognised automatically, matched to the right customer and archived, with no manual sorting."
+[value3_title]
+other = "Fits right into your Microsoft 365 setup"
+[value3_desc]
+other = "Sign in with your Outlook login, file storage via Microsoft Graph and SharePoint, PDF generation for customer sheets and orders."
+
+[module_kicker]
+other = "Feature overview"
+[module_heading]
+other = "A module for every step of your trading business"
+
+[reference_kicker]
+other = "Reference"
+
+[security_kicker]
+other = "Security & Scale"
+[security_heading]
+other = "Grows with your business"
+[security_intro]
+other = "Whether one site or several, ten items or ten thousand: {{.Product}} grows with your needs instead of limiting them. Runs on your own infrastructure or in the cloud."
+[security_item1]
+other = "Sign in with your Outlook login, no separate user management"
+[security_item2]
+other = "One shared, consistent data basis for all modules"
+[security_item3]
+other = "Containerised, deployable on your premises or in the cloud on EU servers"
+
+[process_kicker]
+other = "Process"
+[process_heading]
+other = "How you go live"
+[process_intro]
+other = "{{.Product}} isn't just installed, it's set up together with you, from the first conversation to going live."
+[process_step1_title]
+other = "Getting to know you"
+[process_step1_desc]
+other = "We discuss your workflows: customers, items, orders and existing systems."
+[process_step2_title]
+other = "Setup"
+[process_step2_desc]
+other = "{{.Product}} is tailored to your structure, existing data is taken over."
+[process_step3_title]
+other = "Going live"
+[process_step3_desc]
+other = "Your team works in the system, with full visibility from day one."
+
+[pricing_kicker]
+other = "Pricing"
+[pricing_heading]
+other = "Indicative pricing, no surprises"
+[pricing_intro]
+other = "Billed per user, starting at three users. We'll work out the final terms for your business together in the demo."
+[pricing_unit]
+other = "per user, per month · indicative"
+[pricing_onprem_price]
+other = "from €10"
+[pricing_cloud_price]
+other = "from €15"
+[pricing_onprem_title]
+other = "On-premises"
+[pricing_onprem_desc]
+other = "{{.Product}} runs on your own infrastructure."
+[pricing_cloud_title]
+other = "Cloud"
+[pricing_cloud_desc]
+other = "{{.Product}} runs on our infrastructure on EU servers, server costs are added on top."
+[pricing_migration_title]
+other = "Data migration"
+[pricing_migration_price]
+other = "Individual"
+[pricing_migration_unit]
+other = "after an initial data review"
+[pricing_migration_desc]
+other = "Taking over your existing data from Excel or a legacy system."
+
+[faq_kicker]
+other = "FAQ"
+[faq_heading]
+other = "Before you ask"
+
+[contact_heading]
+other = "Ready for a demo?"
+[contact_intro]
+other = "Get to know {{.Product}} in a no-obligation demo, tailored to your trading business."
+[contact_cta]
+other = "Book a demo"
+[contact_or_mail]
+other = "or by email directly:"
+[mailto_subject]
+other = "Demo%20request%20-%20"
+
+[footer_tagline]
+other = "ERP for trading businesses"
+[footer_impressum]
+other = "Legal Notice"
+[footer_datenschutz]
+other = "Privacy Policy"
+[footer_legal_de_only]
+other = "(German only)"

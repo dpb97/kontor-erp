@@ -3,11 +3,11 @@
     <div class="flex items-baseline gap-2 font-serif text-navy">
       {{ partial "logomark.html" . }}
       <span>{{ .Site.Params.product }}</span>
-      <span class="text-ink/40 font-sans text-xs">— Warenwirtschaft für Handelsunternehmen</span>
+      <span class="text-ink/40 font-sans text-xs">— {{ i18n "footer_tagline" }}</span>
     </div>
     <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-      <a href="{{ "impressum/" | relURL }}" class="hover:text-navy transition-colors">Impressum</a>
-      <a href="{{ "datenschutz/" | relURL }}" class="hover:text-navy transition-colors">Datenschutz</a>
+      <a href="{{ "impressum/" | relURL }}" class="hover:text-navy transition-colors">{{ i18n "footer_impressum" }}{{ if ne .Site.Language.Lang "de" }} <span class="text-ink/30">{{ i18n "footer_legal_de_only" }}</span>{{ end }}</a>
+      <a href="{{ "datenschutz/" | relURL }}" class="hover:text-navy transition-colors">{{ i18n "footer_datenschutz" }}{{ if ne .Site.Language.Lang "de" }} <span class="text-ink/30">{{ i18n "footer_legal_de_only" }}</span>{{ end }}</a>
       <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-gold hover:underline">{{ .Site.Params.contactEmail }}</a>
     </nav>
   </div>

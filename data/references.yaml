@@ -1,6 +1,15 @@
-- name: "La Maison Eckmayer"
-  industry: "Interieur & Dekorationsstoffe"
-  logo: "images/logo-eckmayer.png"
-  desc: "Exklusive Ausstattung für Wohn- und Objekteinrichtung: Stoffe, Posamente, Tapeten, Gardinenstangen und Accessoires. Steuert mit Kontor die komplette Warenwirtschaft inklusive Vertreternetz in Deutschland und Österreich, von Kundenstamm und Artikeldaten über Bestellungen und Aufträge bis zur automatisierten Rechnungsstellung und E-Mail-Archivierung."
-  stat: "Hunderte Aufträge & Bestellungen in den ersten zwei Monaten"
-  modules: ["Kunden & Adressen", "Artikel & Lager", "Bestellungen", "Aufträge", "Rechnungen", "Vertreter", "Kontakte", "Ablage (DMS)", "Mail-Archivierung"]
+de:
+  - name: "La Maison Eckmayer"
+    industry: "Interieur & Dekorationsstoffe"
+    logo: "images/logo-eckmayer.png"
+    desc: "Exklusive Ausstattung für Wohn- und Objekteinrichtung: Stoffe, Posamente, Tapeten, Gardinenstangen und Accessoires. Steuert mit Kontor die komplette Warenwirtschaft inklusive Vertreternetz in Deutschland und Österreich, von Kundenstamm und Artikeldaten über Bestellungen und Aufträge bis zur automatisierten Rechnungsstellung und E-Mail-Archivierung."
+    stat: "Hunderte Aufträge & Bestellungen in den ersten zwei Monaten"
+    modules: ["Kunden & Adressen", "Artikel & Lager", "Bestellungen", "Aufträge", "Rechnungen", "Vertreter", "Kontakte", "Ablage (DMS)", "Mail-Archivierung"]
+
+en:
+  - name: "La Maison Eckmayer"
+    industry: "Interior Design & Decorative Fabrics"
+    logo: "images/logo-eckmayer.png"
+    desc: "Exclusive furnishings for residential and commercial interiors: fabrics, trimmings, wallpaper, curtain rods and accessories. Runs its entire ERP on Kontor, including its sales rep network across Germany and Austria, from customer records and item data through purchase and sales orders to automated invoicing and email archiving."
+    stat: "Hundreds of orders in the first two months"
+    modules: ["Customers & Addresses", "Items & Inventory", "Orders (Purchasing)", "Sales Orders", "Invoices", "Sales Reps", "Contacts", "Filing (DMS)", "Email Archiving"]

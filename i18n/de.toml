@@ -1,0 +1,129 @@
+[nav_functions]
+other = "Funktionen"
+[nav_reference]
+other = "Referenz"
+[nav_security]
+other = "Sicherheit"
+[nav_pricing]
+other = "Preise"
+[nav_cta]
+other = "Demo anfragen"
+
+[hero_cta_primary]
+other = "Demo anfragen"
+[hero_cta_secondary]
+other = "Case Study ansehen →"
+[hero_image_alt]
+other = "Kontor Dashboard mit Kunden-, Artikel- und Auftragsübersicht"
+[dashboard_caption]
+other = "{{.Product}} — Dashboard"
+
+[proof_label]
+other = "Im produktiven Einsatz bei"
+
+[value1_title]
+other = "Schluss mit Excel-Chaos"
+[value1_desc]
+other = "Kund:innen, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System statt in verstreuten Listen und Ordnern."
+[value2_title]
+other = "Automatisiert im Hintergrund"
+[value2_desc]
+other = "Eingehende E-Mails werden automatisch erkannt, der passenden Kund:in zugeordnet und archiviert, ganz ohne manuelles Sortieren."
+[value3_title]
+other = "Nahtlos in Ihrer Microsoft-365-Umgebung"
+[value3_desc]
+other = "Anmeldung über Ihren Outlook Login, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge."
+
+[module_kicker]
+other = "Funktionsumfang"
+[module_heading]
+other = "Ein Modul für jeden Schritt Ihres Handelsgeschäfts"
+
+[reference_kicker]
+other = "Referenz"
+
+[security_kicker]
+other = "Sicherheit & Skalierung"
+[security_heading]
+other = "Wächst mit Ihrem Handelsgeschäft"
+[security_intro]
+other = "Ob ein Standort oder mehrere, zehn Artikel oder zehntausend: {{.Product}} wächst mit Ihren Anforderungen, statt sie zu begrenzen. Läuft in Ihrer Infrastruktur oder in der Cloud."
+[security_item1]
+other = "Anmeldung über Ihren Outlook Login möglich, keine separate Nutzerverwaltung"
+[security_item2]
+other = "Eine gemeinsame, konsistente Datenbasis für alle Module"
+[security_item3]
+other = "Containerisiert, einsetzbar bei Ihnen vor Ort oder in der Cloud auf EU-Servern"
+
+[process_kicker]
+other = "Ablauf"
+[process_heading]
+other = "So kommen Sie live"
+[process_intro]
+other = "{{.Product}} wird nicht einfach installiert, sondern gemeinsam mit Ihnen eingerichtet, von den ersten Gesprächen bis zum produktiven Einsatz."
+[process_step1_title]
+other = "Kennenlernen"
+[process_step1_desc]
+other = "Wir besprechen Ihre Abläufe: Kund:innen, Artikel, Aufträge und bestehende Systeme."
+[process_step2_title]
+other = "Einrichtung"
+[process_step2_desc]
+other = "{{.Product}} wird auf Ihre Struktur zugeschnitten, bestehende Daten übernommen."
+[process_step3_title]
+other = "Live-Betrieb"
+[process_step3_desc]
+other = "Ihr Team arbeitet im System, Sie behalten von Anfang an den Überblick."
+
+[pricing_kicker]
+other = "Preise"
+[pricing_heading]
+other = "Richtpreise, keine Überraschungen"
+[pricing_intro]
+other = "Abgerechnet wird pro Nutzer:in, ab drei Nutzer:innen. Die finalen Konditionen für Ihr Handelsgeschäft besprechen wir gemeinsam in der Demo."
+[pricing_unit]
+other = "pro Nutzer:in, pro Monat · Richtpreis"
+[pricing_onprem_price]
+other = "ab 10&nbsp;€"
+[pricing_cloud_price]
+other = "ab 15&nbsp;€"
+[pricing_onprem_title]
+other = "Vor Ort"
+[pricing_onprem_desc]
+other = "{{.Product}} läuft auf Ihrer eigenen Infrastruktur."
+[pricing_cloud_title]
+other = "Cloud"
+[pricing_cloud_desc]
+other = "{{.Product}} läuft auf unserer Infrastruktur auf EU-Servern, Serverkosten kommen anteilig dazu."
+[pricing_migration_title]
+other = "Datenmigration"
+[pricing_migration_price]
+other = "Individuell"
+[pricing_migration_unit]
+other = "nach erster Bestandsanalyse"
+[pricing_migration_desc]
+other = "Übernahme Ihrer bestehenden Daten aus Excel oder Altsystem."
+
+[faq_kicker]
+other = "Häufige Fragen"
+[faq_heading]
+other = "Bevor Sie fragen"
+
+[contact_heading]
+other = "Bereit für eine Demo?"
+[contact_intro]
+other = "Lernen Sie {{.Product}} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft."
+[contact_cta]
+other = "Demo anfragen"
+[contact_or_mail]
+other = "oder direkt per Mail:"
+[mailto_subject]
+other = "Demo%20anfragen%20-%20"
+
+[footer_tagline]
+other = "Warenwirtschaft für Handelsunternehmen"
+[footer_impressum]
+other = "Impressum"
+[footer_datenschutz]
+other = "Datenschutz"
+[footer_legal_de_only]
+other = "(nur auf Deutsch)"
