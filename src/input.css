@@ -5,47 +5,19 @@
 
 @plugin "@tailwindcss/typography";
 
-@plugin "daisyui" {
-  themes: kontor --default;
-}
-
-@plugin "daisyui/theme" {
-  name: "kontor";
-  default: true;
-  color-scheme: light;
-  --color-base-100: #faf8f4;
-  --color-base-200: #f1efe9;
-  --color-base-300: #e4e0d8;
-  --color-base-content: #1c1f24;
-  --color-primary: #003366;
-  --color-primary-content: #ffffff;
-  --color-secondary: #b28a4c;
-  --color-secondary-content: #1c1f24;
-  --color-accent: #d9b877;
-  --color-accent-content: #1c1f24;
-  --color-neutral: #001d3d;
-  --color-neutral-content: #dfe6ee;
-  --color-info: #3178c6;
-  --color-info-content: #ffffff;
-  --color-success: #2e7d5b;
-  --color-success-content: #ffffff;
-  --color-warning: #b28a4c;
-  --color-warning-content: #1c1f24;
-  --color-error: #b3402f;
-  --color-error-content: #ffffff;
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 0;
-}
-
 @theme {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-cream: #faf7f2;
+  --color-paper: #f4f0e8;
+  --color-ink: #24211c;
+  --color-muted: #6b6559;
+  --color-line: #ddd5c4;
+  --color-navy: #003366;
+  --color-navy-dark: #00203d;
+  --color-gold: #a9803f;
+  --color-gold-light: #cda05c;
 }
 
 html {
@@ -53,6 +25,8 @@ html {
 }
 body {
   font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-ink);
 }
 h1, h2, h3, h4 {
   font-family: var(--font-serif);

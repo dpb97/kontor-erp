@@ -3,7 +3,7 @@ title: "Datenschutzerklärung"
 layout: "legal"
 ---
 
-<div class="not-prose my-6 rounded-lg border border-yellow-600/30 bg-yellow-50 p-4 text-sm text-base-content">
+<div class="not-prose my-8 border-l-2 border-gold pl-5 py-1 text-sm text-ink">
   🚧 <strong>Work in Progress:</strong> Die vollständige Anschrift des Verantwortlichen wird ergänzt, sobald final feststehen – siehe Impressum.
 </div>
 

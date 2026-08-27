@@ -1,15 +1,15 @@
 {{ $home := .Site.Home.RelPermalink }}
-<header class="navbar sticky top-0 z-20 bg-base-100/90 backdrop-blur border-b border-base-300 px-4 md:px-8 max-w-6xl mx-auto">
-  <div class="navbar-start">
-    <a href="{{ $home }}" class="flex items-center gap-2.5 font-serif font-bold text-primary tracking-tight">
+<header class="border-b border-line">
+  <div class="max-w-4xl mx-auto px-6 flex items-center justify-between h-20">
+    <a href="{{ $home }}" class="flex items-baseline gap-2 font-serif text-navy tracking-wide">
       {{ partial "logomark.html" . }}
-      <span>{{ .Site.Params.product }}</span>
+      <span class="text-lg">{{ .Site.Params.product }}</span>
     </a>
-  </div>
-  <div class="navbar-end gap-6 text-sm font-medium">
-    <a href="{{ $home }}#module" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Funktionen</a>
-    <a href="{{ $home }}#referenz" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Referenz</a>
-    <a href="{{ $home }}#architektur" class="hidden sm:inline text-primary/75 hover:text-primary transition-colors">Sicherheit</a>
-    <a href="{{ $home }}#kontakt" class="btn btn-primary btn-sm rounded-full">Demo anfragen</a>
+    <nav class="hidden sm:flex items-center gap-8 text-xs uppercase tracking-widest text-ink/70">
+      <a href="{{ $home }}#module" class="hover:text-navy transition-colors">Funktionen</a>
+      <a href="{{ $home }}#referenz" class="hover:text-navy transition-colors">Referenz</a>
+      <a href="{{ $home }}#architektur" class="hover:text-navy transition-colors">Sicherheit</a>
+      <a href="{{ $home }}#kontakt" class="text-navy border-b border-navy pb-0.5 hover:text-gold hover:border-gold transition-colors">Demo anfragen</a>
+    </nav>
   </div>
 </header>

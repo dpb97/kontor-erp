@@ -2,65 +2,67 @@
 
 {{ partial "nav.html" . }}
 
-<main id="top">
+<main>
 
-  <section class="hero bg-base-100 pt-20 pb-4">
-    <div class="hero-content flex-col text-center max-w-2xl">
-      <p class="text-xs font-bold uppercase tracking-widest text-secondary">{{ .Site.Params.kicker }}</p>
-      <h1 class="font-serif font-bold text-primary text-4xl md:text-5xl leading-tight mt-3">{{ .Site.Params.tagline }}</h1>
-      <p class="text-base-content/70 text-lg mt-4 max-w-xl">{{ .Site.Params.description }}</p>
-      <p class="text-xs font-bold uppercase tracking-wide text-secondary mt-4">{{ .Site.Params.audience }}</p>
-      <div class="flex flex-wrap gap-3 justify-center mt-7">
-        <a href="#kontakt" class="btn btn-primary rounded-full px-6">Demo anfragen</a>
-        <a href="#referenz" class="btn btn-outline btn-primary rounded-full px-6">Case Study ansehen</a>
+  <section class="pt-24 pb-16 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-5">{{ .Site.Params.kicker }}</p>
+      <h1 class="font-serif text-navy text-4xl md:text-5xl leading-[1.15] mb-6">{{ .Site.Params.tagline }}</h1>
+      <p class="text-ink/70 text-lg leading-relaxed mb-5">{{ .Site.Params.description }}</p>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-10">{{ .Site.Params.audience }}</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#kontakt" class="border border-navy text-navy px-7 py-3 text-sm tracking-wide hover:bg-navy hover:text-white transition-colors">Demo anfragen</a>
+        <a href="#referenz" class="px-7 py-3 text-sm tracking-wide text-ink/70 hover:text-navy transition-colors">Case Study ansehen →</a>
       </div>
     </div>
   </section>
 
-  <section class="pb-16 px-4">
-    <div class="mockup-browser border border-base-300 bg-base-100 shadow-xl max-w-4xl mx-auto">
-      <div class="mockup-browser-toolbar">
-        <div class="input border border-base-300 text-base-content/50 text-xs">ihre-firma.kontor.app / dashboard</div>
+  <section class="pb-24 px-6">
+    <figure class="max-w-3xl mx-auto">
+      <div class="border border-line p-2 bg-white">
+        <img src="{{ "images/screenshot_overview.png" | relURL }}" alt="Kontor Dashboard mit Kunden-, Artikel- und Auftragsübersicht" class="w-full">
       </div>
-      <img src="{{ "images/screenshot_overview.png" | relURL }}" alt="Kontor Dashboard mit Kunden-, Artikel- und Auftragsübersicht" class="w-full border-t border-base-300">
+      <figcaption class="text-center text-xs text-ink/40 mt-4 tracking-wide">{{ .Site.Params.product }} — Dashboard</figcaption>
+    </figure>
+  </section>
+
+  <section class="py-10 px-6 border-y border-line">
+    <div class="flex items-center justify-center gap-5">
+      <span class="text-xs uppercase tracking-widest text-ink/40">Im produktiven Einsatz bei</span>
+      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="h-9 w-auto object-contain grayscale opacity-70">
     </div>
   </section>
 
-  <section class="pb-16 px-4">
-    <div class="flex items-center justify-center gap-4">
-      <span class="text-xs font-bold uppercase tracking-wide text-base-content/50">Im produktiven Einsatz bei</span>
-      <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="h-8 w-auto object-contain opacity-80 grayscale">
-    </div>
-  </section>
-
-  <section class="pb-20 px-4">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="font-serif font-bold text-primary text-lg mb-2">Schluss mit Excel-Chaos</h3>
-        <p class="text-base-content/70 text-sm">Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line">
+      <div class="md:px-8 py-6 md:py-0 first:pt-0">
+        <h3 class="font-serif text-navy text-lg mb-3">Schluss mit Excel-Chaos</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
       </div>
-      <div>
-        <h3 class="font-serif font-bold text-primary text-lg mb-2">Automatisiert im Hintergrund</h3>
-        <p class="text-base-content/70 text-sm">Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
+      <div class="md:px-8 py-6 md:py-0">
+        <h3 class="font-serif text-navy text-lg mb-3">Automatisiert im Hintergrund</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
       </div>
-      <div>
-        <h3 class="font-serif font-bold text-primary text-lg mb-2">Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
-        <p class="text-base-content/70 text-sm">Anmeldung über Entra ID, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
+      <div class="md:px-8 py-6 md:py-0">
+        <h3 class="font-serif text-navy text-lg mb-3">Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
+        <p class="text-ink/65 text-sm leading-relaxed">Anmeldung über Entra ID, Dateiablage über Microsoft Graph und SharePoint, PDF-Erzeugung für Stammblätter und Aufträge.</p>
       </div>
     </div>
   </section>
 
-  <section id="module" class="py-20 px-4 bg-base-200/60 border-y border-base-300">
-    <div class="max-w-5xl mx-auto">
-      <p class="text-xs font-bold uppercase tracking-widest text-secondary mb-2">Funktionsumfang</p>
-      <h2 class="font-serif font-bold text-primary text-2xl md:text-3xl max-w-lg mb-10">Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {{ range .Site.Data.modules }}
-        <div class="card bg-base-100 border border-base-300 hover:border-secondary transition-colors">
-          <div class="card-body p-6">
-            <span class="text-secondary">{{ partial "icon.html" .icon }}</span>
-            <h3 class="card-title font-serif text-base mt-2">{{ .name }}</h3>
-            <p class="text-base-content/70 text-sm">{{ .desc }}</p>
+  <section id="module" class="py-24 px-6 bg-paper border-y border-line">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-3 text-center">Funktionsumfang</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-16 text-center">Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12">
+        {{ range $i, $m := .Site.Data.modules }}
+        {{ $border := "border-t border-line" }}
+        {{ if eq $i 0 }}{{ $border = "" }}{{ else if eq $i 1 }}{{ $border = "border-t border-line sm:border-t-0" }}{{ end }}
+        <div class="flex gap-5 py-6 {{ $border }}">
+          <span class="font-serif text-gold text-sm shrink-0 pt-0.5">{{ printf "%02d" (add $i 1) }}</span>
+          <div>
+            <h3 class="font-serif text-navy text-base mb-1.5">{{ $m.name }}</h3>
+            <p class="text-ink/65 text-sm leading-relaxed">{{ $m.desc }}</p>
           </div>
         </div>
         {{ end }}
@@ -68,68 +70,50 @@
     </div>
   </section>
 
-  <section id="referenz" class="py-20 px-4">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
+  <section id="referenz" class="py-24 px-6">
+    <div class="max-w-2xl mx-auto text-center">
       {{ range .Site.Data.references }}
-      <div class="card bg-base-200/60 border border-base-300">
-        <div class="card-body items-center text-center py-10">
-          <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="max-w-[200px]">
-          <span class="text-xs font-semibold text-base-content/60 tracking-wide mt-2">{{ .industry }}</span>
-        </div>
+      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-8">Referenz</p>
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="h-16 w-auto mx-auto mb-3">
+      <p class="text-xs uppercase tracking-widest text-ink/40 mb-10">{{ .industry }}</p>
+      <p class="font-serif text-navy text-xl md:text-2xl leading-snug mb-10">{{ .desc }}</p>
+      {{ if .statValue }}
+      <div class="mb-10">
+        <div class="font-serif text-gold text-4xl mb-1">{{ .statValue }}</div>
+        <div class="text-xs uppercase tracking-widest text-ink/50">{{ .statTitle }}</div>
+        <div class="text-xs text-ink/40 mt-1">{{ .statDesc }}</div>
       </div>
-      <div>
-        <p class="text-xs font-bold uppercase tracking-widest text-secondary mb-2">Referenz</p>
-        <h2 class="font-serif font-bold text-primary text-2xl md:text-3xl mb-4">Im produktiven Einsatz: {{ .name }}</h2>
-        <p class="text-base-content/70 mb-6">{{ .desc }}</p>
-        {{ if .statValue }}
-        <div class="stats border border-base-300 bg-base-100 mb-6">
-          <div class="stat py-3 px-5">
-            <div class="stat-value text-primary text-2xl font-serif">{{ .statValue }}</div>
-            <div class="stat-title text-secondary font-semibold">{{ .statTitle }}</div>
-            <div class="stat-desc">{{ .statDesc }}</div>
-          </div>
-        </div>
-        {{ end }}
-        <div class="flex flex-wrap gap-2">
-          {{ range .modules }}<span class="badge badge-outline border-base-300 text-primary">{{ . }}</span>{{ end }}
-        </div>
-      </div>
+      {{ end }}
+      <p class="text-xs text-ink/40 leading-loose">
+        {{ range $i, $mod := .modules }}{{ if $i }} · {{ end }}{{ $mod }}{{ end }}
+      </p>
       {{ end }}
     </div>
   </section>
 
-  <section id="architektur" class="py-16 px-4 bg-neutral text-neutral-content text-center">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Sicherheit &amp; Skalierung</p>
-      <h2 class="font-serif font-bold text-white text-2xl md:text-3xl mb-4">Wächst mit Ihrem Handelsgeschäft</h2>
-      <p class="text-neutral-content/70 mb-10">
+  <section id="architektur" class="py-20 px-6 bg-paper border-y border-line">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-3">Sicherheit &amp; Skalierung</p>
+      <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">Wächst mit Ihrem Handelsgeschäft</h2>
+      <p class="text-ink/65 leading-relaxed mb-12 max-w-lg mx-auto">
         Ob ein Standort oder mehrere, zehn Artikel oder zehntausend –
         {{ .Site.Params.product }} wächst mit Ihren Anforderungen, statt
         sie zu begrenzen. Läuft in Ihrer Infrastruktur oder in der Cloud.
       </p>
-      <ul class="flex flex-wrap justify-center gap-9 list-none p-0 m-0">
-        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
-          <span class="text-accent">{{ partial "icon.html" "shield-check" }}</span>
-          Anmeldung über Microsoft Entra ID – keine separate Nutzerverwaltung
-        </li>
-        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
-          <span class="text-accent">{{ partial "icon.html" "database" }}</span>
-          Eine gemeinsame, konsistente Datenbasis für alle Module
-        </li>
-        <li class="flex flex-col items-center gap-2.5 max-w-[220px] text-sm text-neutral-content/90">
-          <span class="text-accent">{{ partial "icon.html" "server" }}</span>
-          Containerisiert – einsetzbar bei Ihnen vor Ort oder in der Cloud
-        </li>
-      </ul>
+      <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line max-w-xl mx-auto">
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Anmeldung über Microsoft Entra ID – keine separate Nutzerverwaltung</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Eine gemeinsame, konsistente Datenbasis für alle Module</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Containerisiert – einsetzbar bei Ihnen vor Ort oder in der Cloud</p>
+      </div>
     </div>
   </section>
 
-  <section id="kontakt" class="py-20 px-4 bg-primary text-primary-content text-center">
+  <section id="kontakt" class="py-24 px-6 bg-navy text-white text-center">
     <div class="max-w-md mx-auto">
-      <h2 class="font-serif font-bold text-white text-2xl md:text-3xl mb-3">Bereit für eine Demo?</h2>
-      <p class="text-primary-content/75 mb-7">Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
-      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="btn btn-secondary rounded-full px-7">Demo anfragen</a>
-      <p class="text-xs text-primary-content/60 mt-5">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-accent font-semibold hover:underline">{{ .Site.Params.contactEmail }}</a></p>
+      <h2 class="font-serif text-2xl md:text-3xl mb-4">Bereit für eine Demo?</h2>
+      <p class="text-white/65 leading-relaxed mb-9">Lernen Sie {{ .Site.Params.product }} in einer unverbindlichen Demo kennen – zugeschnitten auf Ihr Handelsgeschäft.</p>
+      <a href="mailto:{{ .Site.Params.contactEmail }}?subject=Demo%20anfragen%20-%20{{ .Site.Params.product }}" class="inline-block border border-gold-light text-gold-light px-7 py-3 text-sm tracking-wide hover:bg-gold-light hover:text-navy transition-colors">Demo anfragen</a>
+      <p class="text-xs text-white/40 mt-6">oder direkt per Mail: <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-gold-light hover:underline">{{ .Site.Params.contactEmail }}</a></p>
     </div>
   </section>
 
