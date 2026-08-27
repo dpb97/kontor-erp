@@ -6,7 +6,7 @@
 
   <section class="pt-24 pb-16 px-6 text-center">
     <div class="max-w-2xl mx-auto">
-      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-5">{{ .Site.Params.kicker }}</p>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-5">{{ .Site.Params.kicker }}</p>
       <h1 class="font-serif text-navy text-4xl md:text-5xl leading-[1.15] mb-6">{{ .Site.Params.tagline }}</h1>
       <p class="text-ink/70 text-lg leading-relaxed mb-5">{{ .Site.Params.description }}</p>
       <p class="text-xs uppercase tracking-[0.15em] text-gold mb-10">{{ .Site.Params.audience }}</p>
@@ -28,20 +28,20 @@
 
   <section class="py-10 px-6 border-y border-line">
     <div class="flex items-center justify-center gap-5">
-      <span class="text-xs uppercase tracking-widest text-ink/40">Im produktiven Einsatz bei</span>
+      <span class="text-xs uppercase tracking-[0.15em] text-gold">Im produktiven Einsatz bei</span>
       <img src="{{ (index .Site.Data.references 0).logo | relURL }}" alt="{{ (index .Site.Data.references 0).name }}" class="h-9 w-auto object-contain grayscale opacity-70">
     </div>
   </section>
 
-  <section class="py-20 px-6">
+  <section class="py-24 px-6">
     <div class="max-w-4xl mx-auto grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line">
       <div class="md:px-8 py-6 md:py-0 first:pt-0">
         <h3 class="font-serif text-navy text-lg mb-3">Schluss mit Excel-Chaos</h3>
-        <p class="text-ink/65 text-sm leading-relaxed">Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System – statt verstreuter Listen und Ordner.</p>
+        <p class="text-ink/65 text-sm leading-relaxed">Kunden, Artikel, Aufträge, Rechnungen und Dokumente in einem durchgängigen System statt in verstreuten Listen und Ordnern.</p>
       </div>
       <div class="md:px-8 py-6 md:py-0">
         <h3 class="font-serif text-navy text-lg mb-3">Automatisiert im Hintergrund</h3>
-        <p class="text-ink/65 text-sm leading-relaxed">Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert – ohne manuelles Sortieren.</p>
+        <p class="text-ink/65 text-sm leading-relaxed">Eingehende E-Mails werden automatisch erkannt, dem passenden Kunden zugeordnet und archiviert, ganz ohne manuelles Sortieren.</p>
       </div>
       <div class="md:px-8 py-6 md:py-0">
         <h3 class="font-serif text-navy text-lg mb-3">Nahtlos in Ihrer Microsoft-365-Umgebung</h3>
@@ -52,7 +52,7 @@
 
   <section id="module" class="py-24 px-6 bg-paper border-y border-line">
     <div class="max-w-3xl mx-auto">
-      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-3 text-center">Funktionsumfang</p>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3 text-center">Funktionsumfang</p>
       <h2 class="font-serif text-navy text-2xl md:text-3xl mb-16 text-center">Ein Modul für jeden Schritt Ihres Handelsgeschäfts</h2>
       <div class="grid sm:grid-cols-2 gap-x-12">
         {{ range $i, $m := .Site.Data.modules }}
@@ -73,37 +73,31 @@
   <section id="referenz" class="py-24 px-6">
     <div class="max-w-2xl mx-auto text-center">
       {{ range .Site.Data.references }}
-      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-8">Referenz</p>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-8">Referenz</p>
       <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="h-16 w-auto mx-auto mb-3">
-      <p class="text-xs uppercase tracking-widest text-ink/40 mb-10">{{ .industry }}</p>
-      <p class="font-serif text-navy text-xl md:text-2xl leading-snug mb-10">{{ .desc }}</p>
-      {{ if .statValue }}
-      <div class="mb-10">
-        <div class="font-serif text-gold text-4xl mb-1">{{ .statValue }}</div>
-        <div class="text-xs uppercase tracking-widest text-ink/50">{{ .statTitle }}</div>
-        <div class="text-xs text-ink/40 mt-1">{{ .statDesc }}</div>
-      </div>
-      {{ end }}
-      <p class="text-xs text-ink/40 leading-loose">
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-10">{{ .industry }}</p>
+      <p class="font-serif text-navy text-xl md:text-2xl leading-snug mb-8">{{ .desc }}</p>
+      {{ if .stat }}<p class="text-xs uppercase tracking-[0.15em] text-gold mb-8">{{ .stat }}</p>{{ end }}
+      <p class="text-xs uppercase tracking-[0.15em] text-ink/40 leading-loose">
         {{ range $i, $mod := .modules }}{{ if $i }} · {{ end }}{{ $mod }}{{ end }}
       </p>
       {{ end }}
     </div>
   </section>
 
-  <section id="architektur" class="py-20 px-6 bg-paper border-y border-line">
+  <section id="architektur" class="py-24 px-6 bg-paper border-y border-line">
     <div class="max-w-2xl mx-auto text-center">
-      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-3">Sicherheit &amp; Skalierung</p>
+      <p class="text-xs uppercase tracking-[0.15em] text-gold mb-3">Sicherheit &amp; Skalierung</p>
       <h2 class="font-serif text-navy text-2xl md:text-3xl mb-6">Wächst mit Ihrem Handelsgeschäft</h2>
       <p class="text-ink/65 leading-relaxed mb-12 max-w-lg mx-auto">
-        Ob ein Standort oder mehrere, zehn Artikel oder zehntausend –
+        Ob ein Standort oder mehrere, zehn Artikel oder zehntausend:
         {{ .Site.Params.product }} wächst mit Ihren Anforderungen, statt
         sie zu begrenzen. Läuft in Ihrer Infrastruktur oder in der Cloud.
       </p>
       <div class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line max-w-xl mx-auto">
-        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Anmeldung über Microsoft Entra ID – keine separate Nutzerverwaltung</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Anmeldung über Microsoft Entra ID, keine separate Nutzerverwaltung</p>
         <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Eine gemeinsame, konsistente Datenbasis für alle Module</p>
-        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Containerisiert – einsetzbar bei Ihnen vor Ort oder in der Cloud</p>
+        <p class="text-sm text-ink/70 leading-relaxed sm:px-6 py-4 sm:py-0">Containerisiert, einsetzbar bei Ihnen vor Ort oder in der Cloud</p>
       </div>
     </div>
   </section>
