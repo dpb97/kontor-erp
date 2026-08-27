@@ -11,5 +11,21 @@ enableRobotsTXT = true
   audience = "Großhandel · Import · Fachvertrieb · Außendienst"
   contactEmail = "dominik.boeckle@gmail.com"
 
+[[params.faq]]
+  q = "Wie schnell ist Kontor einsatzbereit?"
+  a = "Das hängt vom Umfang ab und wird gemeinsam in der Demo eingeschätzt. La Maison Eckmayer hat bereits in den ersten zwei Monaten hunderte Aufträge und Bestellungen über Kontor abgewickelt."
+
+[[params.faq]]
+  q = "Was passiert mit unseren bestehenden Daten?"
+  a = "Kundenstamm, Artikeldaten und Historie aus Excel oder einem Altsystem werden bei der Einrichtung übernommen."
+
+[[params.faq]]
+  q = "Wo liegen unsere Daten?"
+  a = "Sie entscheiden: Kontor läuft containerisiert und lässt sich bei Ihnen vor Ort oder in der Cloud betreiben."
+
+[[params.faq]]
+  q = "Was kostet Kontor?"
+  a = "Der Preis richtet sich nach Modulumfang und Nutzerzahl und wird individuell in der Demo besprochen."
+
 [markup.goldmark.renderer]
   unsafe = true
